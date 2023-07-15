@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Classifier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Email Classifier</h1>
+    <form action="/predict" method="POST">
+        <textarea name="mail" rows="5" cols="40"></textarea><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <p>Prediction: {{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
